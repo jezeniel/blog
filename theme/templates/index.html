@@ -1,27 +1,24 @@
-{% extends "layouts/base.html" %}
+{% extends "layouts/pages.html" %}
 
-{% block title %}{{ SITENAME }}{% endblock %}
+{% block title %}{{ category }} | {{ SITENAME }}{% endblock %}
 
-{% block body %}
-<section class="hero">
-  <div class="hero-inner">
-    <div class="container">
-      <img src="{{ SITEURL }}/{{AUTHOR_IMG}}" alt="author thumb" class="avatar dot">
-      <h3>Hello, I am <strong itemprop="name">{{ FIRST_NAME }}</strong>.</h3>
-      <p>
-        A developer from Philippines. I am passionate with my work and my interests are on web development, distributed computing, software architecture/design and video games. 
-        <br>Also a family man with a beautiful wife and daughter.
-      </p>
+{% block content %}
+<section class="post-list">
 
-      <a href="{{ SITEURL }}/about/" class="button button-ghost" title="about">about</a>
-      <a href="{{ SITEURL }}/blog/" class="button button-ghost" title="blog">blog</a>
-      <a href="{{ SITEURL }}/projects/" class="button button-ghost" title="projects">projects</a>
-
-      <div style="margin: 25px">
-        {% include "includes/social.html" %}
+  {% for post in articles %}
+  <article class="post">
+    <header class="post-header">
+      <h2 class="post-title">
+        <a class="post-link" href="{{ SITEURL }}/{{ post.url }}">{{ post.title }}</a>
+      </h2>
+      <div class="post-info">
+        <time>{{ post.date.strftime("%A, %B %-d, %Y") }}</time>
+        {% if post.tags %} • {{ post.tags | join(",") }}{% endif %}
       </div>
+    </header>
+    <p>{{ post.content | striptags | truncate(150) }}</p>
+  </article>
+  {% endfor %}
 
-    </div>
-  </div>
 </section>
 {% endblock %}

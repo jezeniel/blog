@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*- #
-from __future__ import unicode_literals
-
 FIRST_NAME = 'Jezeniel'
 LAST_NAME = 'Zapanta'
 AUTHOR = f'{FIRST_NAME}  {LAST_NAME}'
@@ -11,11 +9,14 @@ SITEURL = ''
 SITE_DESCRIPTION="This is my personal website. I blog about software development, tools that I use or just about anything."
 
 GITHUB_URL = 'https://github.com/jezeniel'
-TWITTER_URL = 'https://twitter.com/jezeniel'
+TWITTER_URL = 'https://x.com/jezeniel'
+LINKEDIN_URL = 'https://linkedin.com/in/jezeniel'
 EMAIL_URL = 'mailto:jezeniel.zapanta@gmail.com'
 
 NAVBAR = [
-    ('About', 'about/'), ('Blog', 'blog/'), ('Projects', 'projects/')
+    ('Blog', 'blog/'),
+    ('Projects', 'projects/'),
+    ('About', 'about/'),
 ]
 
 THEME = 'theme/'
