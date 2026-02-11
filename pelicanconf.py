@@ -18,7 +18,7 @@ NAVBAR = [
     ('About', 'about/'), ('Blog', 'blog/'), ('Projects', 'projects/')
 ]
 
-THEME = 'themes/end2end'
+THEME = 'theme/'
 
 PATH = 'content'
 
