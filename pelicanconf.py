@@ -31,6 +31,9 @@ DIRECT_TEMPLATES = ['index']
 AUTHOR_SAVE_AS = ''
 TAG_SAVE_AS = ''
 
+STATIC_PATHS = ['images', 'extra/CNAME']
+EXTRA_PATH_METADATA = {'extra/CNAME': {'path': 'CNAME'}}
+
 ## Markdown
 MARKDOWN = {
     'extensions': [
