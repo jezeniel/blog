@@ -12,7 +12,7 @@ feedgenerator==2.2.1
     # via pelican
 ghp-import==2.1.0
     # via blog
-idna==3.11
+idna==3.15
     # via anyio
 importlib-metadata==8.7.1 ; python_full_version < '3.10'
     # via markdown
